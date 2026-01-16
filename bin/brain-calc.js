@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
 import { playCalcGame, getGameRules } from '../src/games/calc.js';
-import { runGame } from '../src/engine.js';
-runGame(getGameRules(), playCalcGame);
+import { runGameWithUser } from '../src/engine.js';
+const userName = process.argv[2] || null;
+runGameWithUser(getGameRules(), playCalcGame, userName);

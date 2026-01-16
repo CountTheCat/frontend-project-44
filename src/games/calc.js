@@ -20,6 +20,6 @@ const generateRound = () => {
   return [question, correctAnswer];
 };
 
-const getGameRules = () => 'What is the result of the expression?';
+const getGameRules = () => 'Чему равно данное выражение?';
 const playCalcGame = () => generateRound();
 export { playCalcGame, getGameRules };

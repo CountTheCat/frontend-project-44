@@ -1,6 +1,6 @@
 {
   "name": "@hexlet/code",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "первый проект \"Игры разума\"",
   "homepage": "https://github.com/CountTheCat/frontend-project-44#readme",
   "bugs": {
@@ -15,12 +15,15 @@
   "type": "module",
   "main": "./bin/brain-games.js",
   "bin": {
-    "brain-games": "bin/brain-games.js",
-    "brain-even": "bin/brain-even.js",
-    "brain-calc": "./bin/brain-calc.js"
+    "brain-games": "./bin/brain-games.js",
+    "brain-even": "./bin/brain-even.js",
+    "brain-calc": "./bin/brain-calc.js",
+    "brain-nod": "./bin/brain-nod.js",
+    "brain-progression": "./bin/brain-progression.js",
+    "brain-prime": "./bin/brain-prime.js"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+ "scripts": {
+    "start": "node bin/brain-games.js"
   },
   "dependencies": {
     "readline-sync": "^1.4.10"

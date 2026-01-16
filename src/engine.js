@@ -1,31 +1,35 @@
 import { greeting, getUserName, getUserAnswer } from './cli.js';
 
-
-const runGame = (gameRules, playRound) => {
+const runGameWithUser = (gameRules, playRound, existingUserName = null) => {
+  let userName = existingUserName;
+  if (!userName) {
+    greeting();
+    userName = getUserName();
+  } else {
+    console.log(`Привет, ${userName}!`);
+  }
   
-  greeting();
-  const userName = getUserName();
   console.log(gameRules);
 
-  const roundsCount = 3; 
+  const roundsCount = 3;
 
   for (let i = 0; i < roundsCount; i += 1) {
     const [question, correctAnswer] = playRound();
-
     console.log(`Question: ${question}`);
-    const userAnswer = getUserAnswer(); 
+    const userAnswer = getUserAnswer();
 
-    
     if (userAnswer !== correctAnswer) {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${userName}!`);
-      return; 
+      console.log(`'${userAnswer}' Это не правильный ответ. Правильный ответ это '${correctAnswer}'.`);
+      console.log(`Попробуйте еще раз, ${userName}!`);
+      return false; 
     }
-
-    console.log('Correct!');
+    console.log('Великолепно!');
   }
 
-  console.log(`Congratulations, ${userName}!`);
+  console.log(`С победой, ${userName}!`);
+  return true;
 };
 
-export { runGame };
+const runGame = (gameRules, playRound) => runGameWithUser(gameRules, playRound, null);
+
+export { runGame, runGameWithUser };
