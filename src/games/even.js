@@ -6,6 +6,6 @@ const generateRound = () => {
   const correctAnswer = isEven(number);
   return [number.toString(), correctAnswer];
 };
-const getGameRules = () => 'Если число четное ответьте "yes" если нет то "no".';
+const getGameRules = () => 'Answer "yes" if the number is even, otherwise answer "no".';
 const playEvenGame = () => generateRound();
 export { playEvenGame, getGameRules, isEven };

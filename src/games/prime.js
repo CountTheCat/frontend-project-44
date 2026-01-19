@@ -14,6 +14,6 @@ const generateRound = () => {
   return [question, correctAnswer];
 };
 
-const getGameRules = () => 'Если число простое ответьте "yes" если же нет то "no".';
+const getGameRules = () => 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const playPrimeGame = () => generateRound();
 export { playPrimeGame, getGameRules, isPrime };

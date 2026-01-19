@@ -23,6 +23,6 @@ const generateRound = () => {
   return [progressionWithHidden, correctAnswer];
 };
 
-const getGameRules = () => 'Какое число пропущено в последовательности?';
+const getGameRules = () => 'What number is missing in the progression?';
 const playProgressionGame = () => generateRound();
 export { playProgressionGame, getGameRules, generateProgression };

@@ -1,16 +1,10 @@
 import readlineSync from 'readline-sync';
 
-
 const greeting = () => {
-  console.log('Добро пожаловать в Brain games!');
+  console.log('Welcome to the Brain Games!');
 };
 
-const getUserName = () => readlineSync.question('Могу я узнать как тебя зовут? ');
-const getUserAnswer = () => readlineSync.question('Твой ответ: ');
+const getUserName = () => readlineSync.question('May I have your name? ');
+const getUserAnswer = () => readlineSync.question('Your answer: ');
 
-
-const greetUser = (userName) => {
-  console.log(`Добро пожаловать в Brain games, ${userName}!`);
-};
-
-export { greeting, getUserName, getUserAnswer, greetUser };
+export { greeting, getUserName, getUserAnswer };

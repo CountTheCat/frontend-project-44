@@ -15,6 +15,6 @@ const generateRound = () => {
   
   return [question, correctAnswer.toString()];
 };
-const getGameRules = () => 'Найдите наибольший общий делитель';
+const getGameRules = () => 'Find the greatest common divisor of given numbers.';
 const playNodGame = () => generateRound();
 export { playNodGame, getGameRules, calculateNod };
