@@ -1,4 +1,4 @@
-.PHONY: help install publish lint brain-games brain-even brain-calc brain-nod brain-progression brain-prime
+.PHONY: help install publish lint brain-games brain-even brain-calc brain-gcd brain-progression brain-prime
 
 help:
 	@echo "Available commands:"
@@ -8,7 +8,7 @@ help:
 	@echo "  make brain-games      Launch interactive menu"
 	@echo "  make brain-even       Launch even number game"
 	@echo "  make brain-calc       Launch calculator game"
-	@echo "  make brain-nod        Launch GCD game"
+	@echo "  make brain-gcd        Launch GCD game"
 	@echo "  make brain-progression Launch progression game"
 	@echo "  make brain-prime      Launch prime number game"
 
@@ -31,8 +31,8 @@ brain-even:
 brain-calc:
 	./bin/brain-calc.js
 
-brain-nod:
-	./bin/brain-nod.js
+brain-gcd:
+	./bin/brain-gcd.js
 
 brain-progression:
 	./bin/brain-progression.js
