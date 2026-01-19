@@ -1,3 +1,4 @@
+import { getRandomNumber } from '../engine.js';
 const generateProgression = (start, step, length) => {
   const progression = [];
   for (let i = 0; i < length; i += 1) {
@@ -9,13 +10,12 @@ const generateProgression = (start, step, length) => {
 const generateRound = () => {
   const minLength = 5;
   const maxLength = 10;
-  const start = Math.floor(Math.random() * 100) + 1;    
-  const step = Math.floor(Math.random() * 10) + 1;      
-  const length = Math.floor(Math.random() * (maxLength - minLength + 1)) + minLength; 
-  
+  const start = getRandomNumber(1, 100);    
+  const step = getRandomNumber(1, 10);      
+  const length = getRandomNumber(minLength, maxLength); 
+  const hiddenIndex = getRandomNumber(0, length - 1);
+
   const progression = generateProgression(start, step, length);
-  
-  const hiddenIndex = Math.floor(Math.random() * length);
   const correctAnswer = progression[hiddenIndex].toString();
   const progressionWithHidden = progression.map((num, index) => 
     index === hiddenIndex ? '..' : num.toString()
@@ -25,5 +25,4 @@ const generateRound = () => {
 
 const getGameRules = () => 'Какое число пропущено в последовательности?';
 const playProgressionGame = () => generateRound();
-
 export { playProgressionGame, getGameRules, generateProgression };

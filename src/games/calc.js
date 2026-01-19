@@ -1,4 +1,4 @@
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+import { getRandomNumber } from '../engine.js';
 const operations = {
   '+': (a, b) => a + b,
   '-': (a, b) => a - b,

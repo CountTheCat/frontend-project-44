@@ -1,3 +1,4 @@
+import { getRandomNumber } from '../engine.js';
 const calculateNod = (a, b) => {
   if (b === 0) {
     return Math.abs(a);
@@ -6,8 +7,8 @@ const calculateNod = (a, b) => {
 };
 
 const generateRound = () => {
-  const number1 = Math.floor(Math.random() * 100) + 1;
-  const number2 = Math.floor(Math.random() * 100) + 1;
+  const number1 = getRandomNumber(1, 100);
+  const number2 = getRandomNumber(1, 100);
   
   const correctAnswer = calculateNod(number1, number2);
   const question = `${number1} ${number2}`;
