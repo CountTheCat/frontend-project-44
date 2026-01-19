@@ -1,20 +1,20 @@
-import { getRandomNumber } from '../engine.js';
+import { getRandomNumber } from '../engine.js'
 const calculategcd = (a, b) => {
   if (b === 0) {
-    return Math.abs(a);
+    return Math.abs(a)
   }
-  return calculategcd(b, a % b);
-};
+  return calculategcd(b, a % b)
+}
 
 const generateRound = () => {
-  const number1 = getRandomNumber(1, 100);
-  const number2 = getRandomNumber(1, 100);
-  
-  const correctAnswer = calculategcd(number1, number2);
-  const question = `${number1} ${number2}`;
-  
-  return [question, correctAnswer.toString()];
-};
-const getGameRules = () => 'Find the greatest common divisor of given numbers.';
-const playgcdGame = () => generateRound();
-export { playgcdGame, getGameRules, calculategcd };
+  const number1 = getRandomNumber(1, 100)
+  const number2 = getRandomNumber(1, 100)
+
+  const correctAnswer = calculategcd(number1, number2)
+  const question = `${number1} ${number2}`
+
+  return [question, correctAnswer.toString()]
+}
+const getGameRules = () => 'Find the greatest common divisor of given numbers.'
+const playgcdGame = () => generateRound()
+export { playgcdGame, getGameRules, calculategcd }
