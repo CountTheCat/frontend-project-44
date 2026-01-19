@@ -4,5 +4,5 @@ import {greeting, getUserName} from '../src/cli.js';
 greeting(); 
 const userName = getUserName();
 
-console.log(`Hello ${userName}!`);
+console.log(`Hello, ${userName} !`);
 
