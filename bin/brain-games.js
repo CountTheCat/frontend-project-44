@@ -2,4 +2,6 @@
 import {greeting, getUserName} from '../src/cli.js';
 
 greeting(); 
-getUserName();
+const userName = getUserName();
+console.log(`Hello ${userName}!`);
+
