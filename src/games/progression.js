@@ -18,7 +18,7 @@ const generateRound = () => {
   const progression = generateProgression(start, step, length)
   const correctAnswer = progression[hiddenIndex].toString()
   const progressionWithHidden = progression.map((num, index) =>
-    index === hiddenIndex ? '..' : num.toString()
+    index === hiddenIndex ? '..' : num.toString(),
   ).join(' ')
   return [progressionWithHidden, correctAnswer]
 }

@@ -1,5 +1,7 @@
 import { getRandomNumber } from '../engine.js'
-const isEven = (num) => (num % 2 === 0 ? 'yes' : 'no')
+const isEven = (num) => {
+  return (num % 2 === 0 ? 'yes' : 'no')
+}
 
 const generateRound = () => {
   const number = getRandomNumber(1, 100)
